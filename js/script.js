@@ -81,7 +81,6 @@ function newGame() {
     playSound("green");
     go = 0;
     score = 0;
-    console.log(score);
     $("#score").text(score);
     speed = hard ? 750 : 1500;
     turns = [];
