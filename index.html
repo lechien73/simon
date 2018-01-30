@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <title>Simon</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-sm-10">
+                <img src="img/simonlogo.jpg" width="200px" alt="Simon logo" />
+            </div>
+            <div class="col-xs-6 col-sm-2">
+                <a data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-info-sign help" aria-hidden="true"></span><span class="sr-only">Help</span></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-8 col-md-offset-2">
+                <div class="circle">
+                    <button id="red" class="segment1"></button>
+                    <button id="blue" class="segment2"></button>
+                    <button id="green" class="segment3"></button>
+                    <button id="yellow" class="segment4"></button>
+                    <div class="middle">
+                        <p id="scoreSection">Score: <span id="score">0</span></p>
+                        <button class="btn btn-default newGame" onclick="newGame()">New Game</button>
+                        <div class="switch-button"></div>
+                        <p class="levelLabel">EASY / HARD</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">How to play Simon</h4>
+          </div>
+          <div class="modal-body">
+            <ol>
+                <li>At the start of the game, Simon will give the first signal by lighting up one colour and playing a sound. Repeat the signal by clicking on or pressing the colour.</li>
+                <li>Simon will duplicate the first signal and add a second one. Repeat this signal by clicking on or pressing the colours in order.</li>
+                <li>Simon will duplicate these signals and add one.</li>
+                <li>Continue playing for as long as you can remember the sequence.</li>
+                <li>When you make a mistake, the game ends.</li>
+            </ol>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    
+</body>
+</html>
