@@ -38,7 +38,6 @@ async function newTurn() {
     let a = Math.floor(Math.random() * 4);
     turns.push(a);
     for(let i in turns) {
-        console.log(i);
         await sleep(speed);
         playTurn(turns[i]);
     }
@@ -75,18 +74,17 @@ async function flashLights(repeat) {
     }
 }
 
-async function newGame() {
+function newGame() {
     playSound("red");
     playSound("blue");
     playSound("yellow");
     playSound("green");
-    flashLights(2);
-    turns = []
     go = 0;
     score = 0;
-    speed = hard ? 750 : 1500;
+    console.log(score);
     $("#score").text(score);
-    await sleep (1500 * 2);
+    speed = hard ? 750 : 1500;
+    turns = [];
     newTurn();
 }
 
